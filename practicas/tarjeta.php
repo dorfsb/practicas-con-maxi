@@ -31,10 +31,10 @@
         <ul class="navbar-nav me-auto">
 
           <li class="nav-item">
-            <a class="nav-link active" href="#">MMO</a>
+            <a class="nav-link active" href="tarjeta-mmo.php">MMO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Electro</a>
+            <a class="nav-link active" href="tarjeta-electro.php">Electro</a>
           </li>
 
 
@@ -42,8 +42,8 @@
             <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
               aria-haspopup="true" aria-expanded="false">Informatíca</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Mañana</a>
-              <a class="dropdown-item" href="#">Tarde</a>
+              <a class="dropdown-item" href="tarjeta-infomañana.php">Mañana</a>
+              <a class="dropdown-item" href="tarjeta-infotarde.php">Tarde</a>
 
 
             </div>
@@ -81,7 +81,9 @@
         echo '<h5 class="card-title">'. $tarjeta['nombre'].'</h5>';
         echo '<p class="card-text">' . $tarjeta['descripcion'] . '</p>';
         $ins = 'https://www.instagram.com/' . $tarjeta['ig'] .'/';
-        echo '<a href="'.$ins.'"  class="btn btn-outline-ligth">redes</a>';
+        echo '<a href="'.$ins.'" >';
+        echo '<img src="imagenes/descarga.png"  withd="30px" height="30px"alt="">';
+        echo '</a>';
         echo '</div>';
         echo '</div>';
        

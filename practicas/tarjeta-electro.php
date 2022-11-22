@@ -16,7 +16,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.php">
         <img src="imagenes/Logo-removebg-preview.png" height="75px" width="75px" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
@@ -59,14 +59,15 @@
       include 'cnx.php';
       $consulta = mysqli_query($mysqli,"SELECT * FROM basedt.tarjetas where curso='2'" );
       while ($tarjeta= mysqli_fetch_array($consulta)){
-        
         echo '<div class="card" style="width: 18rem;">';
         echo '<img class="card-img-top" src="'. $tarjeta['img'] .'" alt="Card image cap">';
         echo '<div class="card-body">';
         echo '<h5 class="card-title">'. $tarjeta['nombre'].'</h5>';
         echo '<p class="card-text">' . $tarjeta['descripcion'] . '</p>';
         $ins = 'https://www.instagram.com/' . $tarjeta['ig'] .'/';
-        echo '<a href="'.$ins.'"  class="btn btn-primary">redes</a>';
+        echo '<a href="'.$ins.'" >';
+        echo '<img src="imagenes/descarga.png"  withd="30px" height="30px"alt="">';
+        echo '</a>';
         echo '</div>';
         echo '</div>';
        
