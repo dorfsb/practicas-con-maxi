@@ -26,9 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav me-auto">
 
-          <li class="nav-item">
-            <a class="nav-link active" href="tarjeta-mmo.php">MMO</a>
-          </li>
+         
           <li class="nav-item">
             <a class="nav-link active" href="tarjeta-electro.php">Electro</a>
           </li>
@@ -51,6 +49,42 @@
         </ul>
       </div>
   </nav>
+
+  <div class="flex">
+  <div class="row">
+
+    
+    <?php
+      include 'cnx.php';
+      $consulta = mysqli_query($mysqli,"SELECT * FROM basedt.tarjetas where curso='1'" );
+      while ($tarjeta= mysqli_fetch_array($consulta)){
+        
+        echo '<div class="card" style="width: 18rem;">';
+        echo '<img class="card-img-top" src="'. $tarjeta['img'] .'" alt="Card image cap">';
+        echo '<div class="card-body">';
+        echo '<h5 class="card-title">'. $tarjeta['nombre'].'</h5>';
+        echo '<p class="card-text">' . $tarjeta['descripcion'] . '</p>';
+        $ins = 'https://www.instagram.com/' . $tarjeta['ig'] .'/';
+        echo '<a href="'.$ins.'"  class="btn btn-primary">redes</a>';
+        echo '</div>';
+        echo '</div>';
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      }
+      ?>
+
+  </div>
+</div>
 
 
   
